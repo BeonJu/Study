@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{ 
+            /* 전체 선택자 : html, head, body, footer, tag  모든 것에 적용 */
+            color: brown;
+            font-size: 20px;
+        }
+        p {  
+            /* 태그 선택자 : 지정한 태그에만 적용 */
+            color: deeppink; 
+        }
+        .title{
+            font-size: 6px;
+        }
+
+        .bg{
+
+            text-align: center;
+        }
+        #board{
+            /* ID 선택자 : #id 로 사용하며 유니크하게 작명해여 사용 합니다.  */
+            font-style: italic;
+            color: black;
+        }
+
+        #contents{
+
+            font-style: italic;
+            color: green;
+        }
+        /* 선택자 끼리는 Ex) #contents, .bg등으로 갯수 상관 없이 그룹 가능*/
+
+      
+
+
+    </style>
+</head>
+<body>
+    <H1>자유게시판</H1>
+    <p>안녕하세요. 내용입니다.</p>
+    <span>태그입니다.</span>
+<!-- 클래스 선택자 : class 영문 명은 의미 또는 작업 내 사용하는 의미 등으로 지어 주셔야 됩니다. -->
+    <h1 class="title" id="board">자유게시판</h1>
+    <p class="title bg" id="contents">안녕하세요 내용입니다.</p>
+    <form>
+        <input type="text" name="user_id" id="user_id">
+    </form>
+</body>
+<footer>
+    <H2>footer 입니다.</H2>
+</footer>
+</html>
