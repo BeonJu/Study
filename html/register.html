@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/register.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            background: #ccc;
+            padding: 20px;
+        }
+
+        #sign_up{
+            background: #fff;
+            border:  1px solid black;
+            border-radius: 5px;
+            padding: 20px;
+            width: 400px;
+        }
+        #sign_up fieldset {
+            border:  1px solid #ccc;
+            margin-bottom: 30px;
+        }
+        #sign_up fieldset:last-of-type{
+            border: none;
+        }
+        #sign_up legend {
+            font-size: 16px;
+            font-weight: bold;
+            padding-left: 5px;
+            padding-bottom: 10px;
+        }
+        #sign_up ul li{
+            line-height: 30px;
+            list-style: none;
+            padding: 5px 10px;
+            margin: 2px;
+        }
+        #sign_up label{
+            float: left;
+            font-size: 13px;
+            width: 110px;  /* 라벨 옆 input 박스를 일정한 간격으로 정렬가능 */
+            
+        }
+        #sign_up button {
+            border: 1px solid black;
+            border-radius: 20px;
+            font-size: 15px;
+            letter-spacing: 1px;
+            padding: 3px 15px;
+            margin: 0 auto;    /* button tag는 inline teg임으로 block 특성 먹어야 됨 */
+            display: block;
+        }
+
+        #sign_up input[type=text], #sign_up input[type=password],
+        #sign_up input[type=tel], #sign_up input[type=email]{
+            border: 1px solid black;
+            border-radius: 3px;
+            font-size: 13px;
+            padding: 3px;
+            width: 200px;
+        }
+
+        #sign_up input[required]{
+            border: 1px solid red;
+        }
+
+        #sign_up input[readonly]{
+            border: none;
+        }
+    </style>
+
+
+
+</head>
+<body>
+<form id="sign_up">
+    <fieldset>
+        <legend>로그인 정보</legend>
+            <ul>
+                <li>
+                    <label for="user_id">아이디</label>
+                    <input type="text" name="user_id" id="user_id" required autofocus>
+                </li>
+                <li>
+                    <label for="user_pw1">비밀번호</label>
+                    <input type="password" name="user_pw1" id="user_pw1" required>
+                </li>
+                <li>
+                    <label for="user_pw2">비밀번호 확인</label>
+                    <input type="password" name="user_pw2" id="user_pw2" required>
+                </li>
+                <li>
+                    <label for="user_lv">회원 등급</label>
+                    <input type="text" name="user_lv" id="user_lv" readonly value="준회원">
+                </li>
+            </ul>
+    </fieldset>
+    <fieldset>
+        <legend>개인 정보</legend>
+        <ul>
+            <li>
+                <label for="user_name">이름</label>
+                <input type="text" name="user_name" id="user_name" placeholder="5자미만 공백없이" required autocomplete="off">
+            </li>
+            <li>
+                <label for="user_email">메일 주소</label>
+                <input type="email" name="user_email" id="user_email" placeholder="adcd@domain.com" required autocomplete="off">
+                <!-- input type="email" 사용시 이메일 형식 자동 검사 -->
+            </li>
+            <li>
+                <label for="user_tel">연락처</label>
+                <input type="tel" name="user_tel" id="user_tel">
+            </li>
+
+        </ul>
+    </fieldset>
+    <fieldset>
+        <button type="submit">제출</button>
+    </fieldset>
+</form>
+
+    
+</body>
+</html>
