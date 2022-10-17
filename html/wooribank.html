@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+        }
+        ul{
+            list-style: none;
+        }
+        img{
+            border: 0;
+        }
+        .title_bt{
+            background-color: bisque;
+        }
+        header, main, footer {
+            box-sizing: border-box;
+        }
+        .header{
+            width: 1440px;
+            height: 100px;
+            background-color: bisque;
+            margin:0 auto;
+        }
+        .header .header_logo{
+
+        }
+        .header .title {
+            width: 1200px;
+            height: 50px;
+            background-color: aquamarine;
+            margin:0 auto;
+            text-align: center;
+            display: flex;
+        }
+        .header .title .menu{
+            width: 100px;
+            height: 50px;
+            background-color:cornflowerblue;
+
+
+
+        }
+        .header .title .title__bt{
+    
+            height: 50px;
+            background-color: darkmagenta;
+
+        }
+        .header .title .title__nav{
+            width: 500px;
+            height: 50px;
+            background-color: brown;
+            /* display: inline-block; */
+
+            
+        }
+        .header .title .title__nav ul{
+            overflow: hidden;
+        }
+        .header .title .title__nav li{
+            float: left;
+        }
+        .wrap .slider{
+            width: 100%;
+            height: 500px;
+            background-color: deeppink;
+        }
+        .wrap__nav{
+            width: 600px;
+            height: 100px;
+        }
+        .wrap__nav .con #wrap__nav_1th{
+            border: 1px solid #fff;
+            border-radius: 50%;
+            background-color: deepskyblue;
+            display: flex;
+            
+
+            
+        }
+
+    </style>
+
+
+</head>
+<body>
+    <header class="header">
+        <div class="title">
+            <div class="header_logo">
+                 <h1><img src="#" alt="우리은행"></h1>
+            </div>
+            <div class="title__bt">
+                <span id="title__bt bt1"><img src="#" alt="#">로그인</span>
+                <span id="title__bt bt2"><img src="#" alt="#">인증센터</span>
+            </div>
+            <div class="menu">
+                <span class="list">
+                 <a href="#">개인</a></li>
+                  <a href="#">기업</a></li>
+                </span>
+            </div>
+            <div class="title__nav">
+                <ul>
+                    <li><a href="#">마이데이터</a></li>
+                    <li><a href="#">자산관리</a></li>
+                    <li><a href="#">금융상품</a></li>
+                    <li><a href="#">카드</a></li>
+                    <li><a href="#">제휴제안</a></li>
+                    <li><a href="#">전체메뉴</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- header end, main start -->
+    <main class="wrap">
+        <section class="slider">
+            <div class="slider__content con"></div>
+        </section>
+        <section class="wrap__nav">
+            <div class="wrap__nav con">
+            <ul id="wrap__nav_1th">
+                <li><a href="#">다른금융 정보조회</a></li>
+                <li><a href="#">조회</a></li>
+                <li><a href="#">이체</a></li>
+                <li><a href="#">환율</a></li>
+                <li><a href="#">빠른메뉴  ></a></li>
+            </ul>
+            </div>
+            <div class="wrap__nav con">
+            <ul id="wrap__nav_2th">
+                <li><a href="#">빠른메뉴</a></li>
+                <li><a href="#">스피드계좌조회</a></li>
+                <li><a href="#">공과금</a></li>
+                <li><a href="#">뱅킹관리</a></li>
+                <li><a href="#">고객광장</a></li>
+                <li><a href="#">영업점안내</a></li>
+                <li><a href="#">우리카드신청</a></li>
+            </ul>
+            </div>
+        </section>
+        <section class="news">
+            <div class="news__nav">
+                <ul>
+                    <li><a href="#">금융 소비자 보호</a></li>
+                    <li><a href="#">보안뉴스</a></li>
+                    <li><a href="#">상품/약관 공시</a></li>
+                </ul>
+            </div>
+        </section>
+        <section class="item">
+            <div class="item__nav">
+                <a href="#"><h3>금융상품</h3></a>
+                <ul>
+                    <li><a href="#">예금</a></li>
+                    <li><a href="#">대출</a></li>
+                    <li><a href="#">펀드</a></li>
+                    <li><a href="#">외환</a></li>
+                    <li><a href="#">신탁</a></li>
+                    <li><a href="#">퇴직연금</a></li>
+                    <li><a href="#">보험</a></li>
+                    <li><a href="#">ISA</a></li>
+                </ul>
+                <ul>
+                    <a href="#"><h3>카드</h3></a>
+                    <li><a href="#">카드신청</li></a>
+                    <li><a href="#">나의카드</li></a>
+                    <li><a href="#">이벤트</li></a>
+                </ul>
+            </div>
+        </section>
+        <section class="service">
+            <div class="service__nav">
+                <div id="wonbanking"></div>
+                <div id="mydata"></div>
+                <div id="smart"></div>
+            </div>
+        </section>
+        <section class="new_notic">
+            <div class="new_notic__notic">
+                <h2>새소식</h2>
+                <span>더보기</span>
+                <ul>
+                    <li><a href="#">[채용]</a></li>
+                    <li><a href="#">[공지]</a></li>
+                    <li><a href="#">[공지]</a></li>
+                </ul>
+            </div>
+            <div class="new_notic__event">
+                <h2>이벤트</h2>
+                <span>더보기</span>
+                <ul>
+                    <li><a href="#">WON뱅킹 신규..</a></li>
+                    <li><a href="#">우리은행 첫 적금..</a></li>
+                    <li><a href="#">직장인을 위한..</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <section class="footer">
+            <div class="footer__nav">
+                <div class="footer_bt">
+                    <div>대표 1588-5000</div>
+                    <div>기타서비스</div>
+                    <div>LANGUAGE</div>
+                    <div>패밀리사이트</div>
+                    <div class="footer_img">
+                        <a href="#"><img src="#" alt="#"></a>
+                        <a href="#"><img src="#" alt="#"></a>
+                        <a href="#"><img src="#" alt="#"></a>
+                        <a href="#"><img src="#" alt="#"></a>
+                        <a href="#"><img src="#" alt="#"></a>
+                    </div>
+                </div>
+                <div id="footer_logo"><a href="#"></a></div>
+                <div id="footer_quick">은행소개 영업점안내 고객광장</div>
+                <div id="footer_copyright">COPYRIGHTS WOORI BANK. ALL RIGHTS RESERVED.</div>
+            </div>
+        </section>
+    </footer>
+    
+</body>
+</html>
