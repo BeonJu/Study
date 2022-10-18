@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var int = Number(prompt("정수를 입력 해주세요",0));
+        // if(int > 50){
+        //     document.write("이상")
+        // }else if(int < 50){
+        //     document.write("이하")
+        // }
+
+        // var int2 = Number(prompt("정수를 입력 해주세요",0));
+        // if(int2 % 3 === 0){
+        //     document.write("3의 배수")
+        // }else if(int2 % 3 >= 0 || int2 % 3 <=0){
+        //     document.write("3의 배수 아님")
+        // }
+
+        var grade
+        var score 
+        grade = Number(prompt(`학년을 입력해주세요`,0));
+        score = Number(prompt(`중간고사 시험 점수를 입력해주세요`,0));
+        if(score < 0 || score > 100 || grade <= -1 || grade >= 7){
+                alert(`에러입니다.`);
+        }else if(grade == 4){
+            if(score >= 70){
+                alert(`${grade}학년 합격`)
+            }else{
+                alert(`${grade}학년 불합격`)
+            }
+            
+        }else if(score >= 60){
+            alert(`${grade}학년 합격`)
+            
+        }else{
+            alert(`${grade}학년 불합격`)
+
+        }
+        
+        
+        // if(grade[0] >= 60){
+        //     document.write("1학년 합격")
+        // }else{
+        //     document.write("1학년 불합격")
+        // }
+        // if(grade[1] >= 60){
+        //     document.write("2학년 합격")
+        // }else{
+        //     document.write("2학년 불합격")
+        // }
+        // if(grade[2] >= 60){
+        //     document.write("3학년 합격")
+        // }else{
+        //     document.write("3학년 불합격")
+        // }
+        // if(grade[3] >= 70){
+        //     document.write("4학년 합격")
+        // }else{
+        //     document.write("4학년 불합격")
+        // }
+        // if(grade[4] >= 60){
+        //     document.write("5학년 합격")
+        // }else{
+        //     document.write("5학년 불합격")
+        // }
+        // if(grade[5] >= 60){
+        //     document.write("6학년 합격")
+        // }else{
+        //     document.write("6학년 불합격")
+        // }
+    </script>
+</body>
+</html>
