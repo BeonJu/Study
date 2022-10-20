@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <script>
+     // 매개변수로 max (1234)를 받아 최대값을 구하는 함수
+      const max = function (...array) {
+        var isMaxNumber = 0;
+        var temp = array;
+        for(const item of array){
+          if(temp < item){
+            temp = item
+          }
+        }
+        return temp;
+      };
+
+      console.log(max(5154,1, 2, 3, 4));
+    </script>
+  </head>
+  <body></body>
+</html>

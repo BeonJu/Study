@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <script>
+      //매개변수로 max([1234])를 받아 최대값을 구하는 함수 
+      const max = function (array) {
+        var isMaxNumber = 0;
+        var temp = array[0];
+        for(const item of array){
+          if(temp < item){
+            temp = item
+          }
+          console.log(typeof(item))
+          console.log(typeof(array))
+        }
+        return temp;
+      };
+
+      console.log(max([4848, 1, 2, 3, 4]));
+
+
+
+    </script>
+  </head>
+  <body></body>
+</html>
