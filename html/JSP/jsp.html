@@ -431,6 +431,12 @@
 // 중괄호 대신 new Object() 생성자 사용도 가능하며, 인덱스 접근자 []를 
 // 사용하여 키-값을 설정할 수도 있다.
 
+// JSONArray = [ ]
+//           or [ ArrayElements ]
+// JSONObject = { }
+//           or { Members }
+
+
 // ex 1 ) var me = {'kim':'byeonguk','birth':1994};
 // ex 2 ) var me = {};
 // me['name'] = 'kimbyeonguk';
@@ -492,6 +498,7 @@
         // clearInterval(timeoutID2)
 
 
+        // 시계 랜더링
         // function getClock(){
         //     const date = new Date();
         //     const hour = String(date.getHours()).padStart(2,"0");
@@ -504,31 +511,200 @@
         // setInterval(getClock, 1000);
 
 
+
         // method chaining
-        const Human = function(){
-            this._name = '';
-            this._age = 0;
-            this._hobby = [];
-        }
-        Human.prototype.setName = function(name){
-            this._name = name;
-            return this; //자기 자신(객채)을 리턴해준다.
-        }
-        Human.prototype.setAge = function(age){
-            this._age = age;
-            return this;
-        }
-        Human.prototype.setHobby = function(hobby){
-            this._hobby = hobby;
-            return this;
-        }
-        Human.prototype.getInfo = function(){
-            console.log(this._name);
-            console.log(this._age);
-            console.log(this._hobby);
-        }
-        const kim = new Human();
-        kim.setName('BeomJu').setAge(31).setHobby('book','painting').getInfo();
+        // Human 이라는 객체 생성
+        // Ref. https://www.nextree.co.kr/p7323/
+        // const Human = function(){
+        //     this._name = '';
+        //     this._age = 0;
+        //     this._hobby = [];
+        // }
+        
+        // Human.prototype.setName = function(name){
+        //     this._name = name;
+        //     console.log('안녕하세요 나의 이름은' + ' ' + name + '입니다.')
+        //     return this; //자기 자신(객채)을 리턴해준다.
+        // }
+        // Human.prototype.setAge = function(age){
+        //     this._age = age;
+        //     console.log('그리고 나의 나이는' + ' ' + age + '입니다.')
+        //     return this;
+        // }
+        // Human.prototype.setHobby = function(hobby1, hobby2){
+        //     this._hobby = [ hobby1, hobby2 ];
+        //     console.log('취미는' + ' ' + hobby1 + '와' + ' ' + hobby2 + ' '+ '입니다.')
+        //     return this;
+        // }
+        // Human.prototype.getInfo = function(){
+        //     console.log(this._name);
+        //     console.log(this._age);
+        //     console.log(this._hobby);
+        //     return this;
+        // }
+        // const kim = new Human();
+        // kim.setContry = function(contry){this._contry = contry; console.log('나의 국가는' + ' ' + contry + '입니다.'); return this;}
+        // kim.setName('BeomJu').setAge(31).setHobby('book','painting').setContry('KR').getInfo();
+        // const lee = new Human();
+        // lee.setName('YungWoo').setAge(29).setHobby('Sport', 'Traver').getInfo();
+
+
+            // 객체는 속성과 메소스(함수)로 구성 됩니다. 
+
+            // let BeomJu = {head:'머리', body:'몸', hand:'손', neil: function(neil){
+            //     console.log(this.hand +'은' +' ' + neil + '을 가지고 있습니다.')
+            // }, footer:"발"}
+            // console.log(BeomJu)
+            // BeomJu.head += '카락';
+            // console.log(BeomJu)
+            // BeomJu.neil('손톱')
+
+            // function Doll(name, gender, size, color) {
+            //     this.name = name;
+            //     this.gender = gender;
+            //     this.issize = size;
+            //     this.size = function(size){
+            //         console.log('\t' + '%' + ' ' +this.name + '의 크기가' + ' ' + size +'임으로 부가 상품 OOO이 추가 되지 않습니다.')
+            //     }
+            //     this.size = (size) =>  {
+            //         console.log('\t' + '%' + ' ' +this.name + '의 크기가' + ' ' + size +'임으로 부가 상품 OOO이 추가 되지 않습니다.')
+
+            //     }
+            //     this.color = color;
+            // }
+            // const ppopy = new Doll();
+            // ppopy.name = 'ppopy';
+            // ppopy.gender = 'female';
+            // ppopy.issize = 'mini';
+            // ppopy.color = 'red';
+
+            // console.log(ppopy);
+            // ppopy.size('mini'); 
+
+            // delete ppopy.color;  삭제
+            // ppopy.color = 'red'; 삭제 되어 없는 ppopy.color 를 다시 추가 생성
+
+            // function Cat(name='별',age='2', breeds = '메인 쿤'){
+            //     this.name = name;
+            //     this.age = age;
+            //     this.breeds = breeds;
+
+            //     this.breed = function(){
+            //         console.log(this.name + '의 품종은' + ' ' + this.breeds + '입니다.')
+            //     }
+
+            //     this.eat = function(food){
+            //         console.log(this.name + '는'+ ' ' + food + '를 먹었습니다.')
+            //     }
+            // }
+            // const nabi = new Cat("별", 3, "페르시안");
+            // nabi.name = '나비';
+            // console.log(nabi)
+            // nabi.eat("비타민이 풍부한 사료")
+            // nabi.breed()
+            
+            // const star = new Cat();
+            // console.log(star);
+            // Math 수학 공식 및 계산식의 내장 함수 !!!!!!!!!!!!!
+                // const f = new Number(277.1321654);
+                // console.log(f.toFixed(2))
+                // 랜덤과 최소값 최대값 구하는 공식은 사용 되니 기억 해둡시다.
+                    // Math.random(), Math.max(), Math.min()
+
+                // var strging = new
+                // strgin.split(' ');
+                // strgin.split();
+                // strgin.split(',');
+                // strgin.split(' , ',2);
+                // strgin.concat(' ,',str2);
+                // strgin.slice(1,3);
+                // strgin.indexof('flower')); 문자 배열의 인덱스값 배출
+                // string.substring(1,3)
+                // string.toLowerCase()
+                // string.toUpperCase()
+                // date.getMonth() 는 -1 값을 뱃어 냄으로 +1을 셋트로 붙여서 사용 
+                // Today.getMonth()+1
+
+// JSONArray = [ ]
+//           or [ ArrayElements ]
+// JSONObject = { }
+//           or { Members }
+
+                // const product2 = [{
+                //     name: '건조바나나',
+                //     type: '바나나절임',
+                //     weight: 2
+                // },{
+                //     name: '건조망고',
+                //     type: '망고절임',
+                //     weight: 2
+                // }]
+                // const obj = JSON.parse(product2[0]);
+
+                // console.log(product2[0]);
+                // console.log(product2[1]);
+  
+                // const json = '{"result":true , "count":42}';
+                // const obj = JSON.parse(json);
+
+                // console.log(obj.result);
+                // console.log(typeof(obj.result));
+                // console.log(obj.count);
+                // console.log(typeof(obj.count));
+
+                    //this.valueOf() ** n  제곱
+
+                    
+    //   console.log('# 랜덤한 정수 숫자')
+    //   console.log('-5~5 사이의 랜덤한 정수 숫자:', Math.floor(num * 10 - 5))
+    //   console.log('-25~25 사이의 랜덤한 정수 숫자:', Math.floor(num * 50 - 25))
+
+    // const 상수에 대한 설명 
+    // const 키워드에 객체를 할당하면 당연히 객체를 가리키는 주소 값이 할당된다. 
+    // 그리고 이 주소 값은 불변이고 내가 생각하는 상수의 역할을 한다. 
+    // 그러나 그 객체에 프라퍼티(Key-문자형과 심볼형, Value-모든 자료형)를
+    //  추가하거나 변경하는 재할당이 가능하다. 그 값은 const 키워드에 직접적으로
+    //   바인딩(binding-묶인) 된 값이 아니기 때문에 당연한 것이라고 생각하면 된다.
+
+    // let에 대한 설명
+    //  let 또한 위 const 상수 설명과 동의 하나 let 선언 시 undefaine값이 default로 들어가 있다.
+                    // 배열 기반의 다중 할당
+                // let [a, b] = [1, 2];
+                // console.log(a, b) 
+
+                // const p = {
+                //     q: 'a',
+                //     w: 'b'
+                // }
+                // let {q, w} = p;
+                // console.log(q,w)
+
+      // 얇은 복사, 깊은 복사
+      // 사야 하는 물건 목록
+    //   const 물건_200301 = ['우유', '식빵']
+    //   const 물건_200302 = 물건_200301
+    //   물건_200302.push('고구마')
+    //   물건_200302.push('토마토')
+
+    //   // 출력
+    //   console.log(물건_200301)
+    //   console.log(물건_200302)
+    //   물건_200301.splice(0,1)
+    //   console.log(물건_200301)
+    //   console.log(물건_200302)
+
+    //   const 물건_200301 = ['우유', '식빵']
+    //   const 물건_200302 = [...물건_200301]
+    //   물건_200302.push('고구마')
+    //   물건_200302.push('토마토')
+
+    //   // 출력
+    //   console.log(물건_200301)
+    //   console.log(물건_200302)
+    //   물건_200301.splice(0,1)
+    //   console.log(물건_200301)
+    //   console.log(물건_200302)
+
 
     </script>
     
