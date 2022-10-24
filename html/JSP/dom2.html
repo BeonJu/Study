@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+
+</head>
+<body>
+<h1></h1>
+<textarea></textarea>
+
+<script>
+    const textarea = document.querySelector('textarea')
+    const h1 = document.querySelector('h1')
+
+    // keypress, keydown
+        textarea.addEventListener('keyup', function(e){
+        const length = textarea.value
+        console.log(e)
+        console.log(e.code)
+        console.log(e.keyCode)
+        console.log(e.altKey)
+        console.log(e.ctrlKey)
+        console.log(e.shiftKey)
+    })
+</script>
+
+</body>
+
+</html>

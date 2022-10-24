@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+/* 초기화 코드 */
+
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+body{
+    background-color: #ccc;
+    padding: 20px;
+}
+
+#sign_up{
+    
+}
+
+#sign_up fieldset {
+
+}
+
+#sign_up fieldset:last-of-type{
+    /* button 부분이 될 것 임 */
+
+}
+
+#sign_up legend {
+    /* 로그인 정보, 개인정보 */
+
+}
+
+#sign_up ul li {
+    /* 로그인 정보, 개인정보 li 전체 선택 */
+
+}
+
+#sign_up label{
+
+
+}
+
+#sign_up button{
+
+
+}
+
+#sign_up input[type=text], #sign_up input[type=password], #sign_up input[type=tel], #sign_up input[type=email]{
+
+
+}
+
+#sign_up input[required]{
+    /* input 태그 중 required 속성이 존재 하는 input 만 선택  */
+
+}
+
+#sign_up input[read-only]{
+    /* input 태그 중 readonly 속성이 존재 하는 input 만 선택  */
+    
+}
+
+#sign_up button[hover]{
+
+    
+}

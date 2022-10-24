@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text"> cm =
+    <span></span>
+    <select>
+        <option value='10'>mm</option>
+        <option value='0.01'>m</option>
+        <option value='0.393701'>inch</option>
+    </select>
+</body>
+<script>
+    let currentVal;  // 현재 값
+    let transVal = 10; // 변환상수
+
+    const select = document.querySelector('select')
+    const span = document.querySelector('span')
+    const input = document.querySelector('input')
+
+    function isCal(){
+        span.textContent = (currentVal * transVal).toFixed(2)
+    }
+
+    input.addEventListener('keyup', function(e){
+        currentVal = Number(input.value)
+        isCal(currentVal, transVal)
+    })
+
+    select.addEventListener('change', function(e){
+        // const options = e.currentTarget.value  // 한줄로 값 가져 올수 있음
+        const options = e.currentTarget.options
+        const index  = e.currentTarget.options.selectedIndex
+        console.log(options)
+        console.log(index)
+        transVal = Number(options[index].value)  // 선택한 select 박스에 값 가져오기
+        
+        isCal(currentVal, transVal)
+    })
+
+
+
+
+
+
+
+</script>
+
+</html>

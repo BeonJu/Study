@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select>
+        <option>떡볶이</option>
+        <option>순대</option>
+        <option>어묵</option>
+        <option>튀김</option>
+    </select>
+    <p>선택: 떡볶이</p>
+    <script>
+        const select = document.querySelector('select')
+        const p = document.querySelector('p')
+
+        select.addEventListener('change', function(e){
+            console.log(e)
+            // options select option들을 다 가져옴
+            // object HTMLOptionElement 배열로 가져옴
+            const options = e.currentTarget.options
+            const index = e.currentTarget.options.selectedIndex
+            // console.log(index)
+            //options 배열에서 index로 배열 지정 후 textcontent로 문자열만 반환
+            p.textContent = `선택은 ${options[index].textContent}`
+        })
+    </script>
+
+    </body>
+</html>
