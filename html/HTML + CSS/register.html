@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <link rel="stylesheet" href="/css/register.css">
-    <style>
+    <link rel="stylesheet" href="../../css/register.css">
+    <!-- <style>
         * {
             margin: 0;
             padding: 0;
@@ -73,7 +73,7 @@
         #sign_up input[readonly]{
             border: none;
         }
-    </style>
+    </style> -->
 
 
 
@@ -87,7 +87,7 @@
                     <label for="user_id">아이디</label>
                     <input type="text" name="user_id" id="user_id" required autofocus maxlength="20">
                     <span class="alert_msg must_id">필수 정보 입니다.</span>
-                    <span class="alert_msg orverlap">중복된 아이디 입니다. </span>
+                    <span class="alert_msg overlap">중복된 아이디 입니다. </span>
                 
                 </li>
                 <li>
@@ -120,6 +120,43 @@
             
             </li>
             <li>
+                <label for="">성별</label>
+            <select name="gender" id="gender" required>
+                <option value="0" selected>성별</option>
+                <option value="남성">남성</option>
+                <option value="여성">여성</option>
+                <option value="선택안함">선택안함</option>
+            </select>
+            <span class="alert_msg reg_gender">성별을 선택해 주세요.</span>
+            </li>
+            <li>
+                <div class="birthday">
+                    <label for="user_birthday">생년원일</label>
+                    <input type="text" name="user_birthday" id="user_birthday" placeholder="년(4자)" required> 
+                    
+                    <select name="user_birthday" required autocomplete="off" id="birthday_m" class="birthday_m">
+                         <option value="0" selected>월</option>
+                         <option value="1m">1월</option>
+                         <option value="2m">2월</option>
+                         <option value="3m">3월</option>
+                         <option value="4m">4월</option>
+                         <option value="5m">5월</option>
+                         <option value="6m">6월</option>
+                         <option value="7m">7월</option>
+                         <option value="8m">8월</option>
+                         <option value="9m">9월</option>
+                         <option value="10m">10월</option>
+                         <option value="11m">11월</option>
+                         <option value="12m">12월</option>
+                    </select>
+
+                 <input type="text" name="birthday_day" id="birthday_day" placeholder="일" autocomplete="off" required>
+                </li>
+            </div>
+                <span class="alert_msg must_Ybirthday">년도 필수 정보 입니다.</span>
+                <span class="alert_msg must_Mbirthday">월 필수 정보 입니다.</span>
+                <span class="alert_msg must_Dbirthday">일 필수 정보 입니다.</span>
+            <li>
                 <label for="user_email">메일 주소</label>
                 <input type="email" name="user_email" id="user_email" placeholder="adcd@domain.com" required autocomplete="off" maxlength="25">
                 <!-- input type="email" 사용시 이메일 형식 자동 검사 -->
@@ -132,11 +169,10 @@
                 <input type="tel" name="user_tel" id="user_tel" maxlength="13" autocomplete="off">
                 <span class="alert_msg reg_tel">전화번호 형식이 일치하지 않습니다.</span>
             </li>
-
         </ul>
     </fieldset>
     <fieldset>
-        <button type="submit" id="submit_button">제출</button>
+        <button type="button" id="submit_button">제출</button>
     </fieldset>
 </form>
 <script src="../../JS/register.js"></script>

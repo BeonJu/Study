@@ -12,7 +12,7 @@ body {
     padding: 20px;
 }
 
-#signup {
+#sign_up {
     background: #fff;
     border: 1px solid #222;
     border-radius: 5px;
@@ -20,18 +20,18 @@ body {
     width: 400px;
 }
 
-#signup fieldset {
+#sign_up fieldset {
     border: 1px solid #ccc;
     margin-bottom: 30px;
 }
 
 /* 제출 버튼 */
-#signup fieldset:last-of-type {
+#sign_up fieldset:last-of-type {
     border: none;
 }
 
 /* 로그인 정보, 개인정보 */
-#signup legend {
+#sign_up legend {
     font-size: 16px;
     font-weight: bold;
     padding-left: 5px;
@@ -39,7 +39,7 @@ body {
 }
 
 /* 개인정보 li, 로그인 정보 li */
-#signup ul li {
+#sign_up ul li {
     line-height: 30px;
     list-style: none;
     padding: 5px 10px;
@@ -47,14 +47,14 @@ body {
 }
 
 /* label요소 */
-#signup label {
+#sign_up label {
     float: left;
     font-size: 13px;
     width: 110px;
 }
 
 /* 제출버튼 */
-#signup button {
+#sign_up button {
     border: 1px solid #222;
     border-radius: 20px;
     font-size: 16px;
@@ -65,9 +65,10 @@ body {
 
 }
 
+
 /* input타입이 text, password, tel, email */
-#signup input[type=text], #signup input[type=password], 
-#signup input[type=tel], #signup input[type=email] {
+#sign_up input[type=text], #sign_up input[type=password], 
+#sign_up input[type=tel], #sign_up input[type=email]{
     border: 1px solid #ccc;
     border-radius: 3px;
     font-size: 13px;
@@ -84,25 +85,53 @@ body {
 } */
 
 /* input에서 required 속성을 가진 */
-#signup input[required] {
+#sign_up input[required] {
     border: 1px red solid;
 }
 
 /* input에서 readonly 속성을 가진 */
-#signup input[readonly] {
+#sign_up input[readonly] {
     border: none;
 }
 
 /* 버튼에 마우스 올렸을 때 */
-#signup button:hover {
+#sign_up button:hover {
     background: #222;
     color: #fff;
 }
 
-#signup .alert_msg {
+#sign_up .alert_msg {
     font-size: 0.8rem;
     /* display: block; */
     display: none;
     color: red;
-    padding-left: 110px;
+    padding-left: 110px;   
+}
+#sign_up .must_Ybirthday {
+    padding-left: 120px;
+}
+#sign_up .must_Mbirthday {
+    padding-left: 120px;
+}
+#sign_up .must_Dbirthday {
+    padding-left: 120px;
+}
+.birthday {
+    display: flex;
+}
+.birthday select{
+    width: 90px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+select{
+    border: 1px solid red;
+    border-radius: 3px;
+    font-size: 13px;
+    padding: 5px;
+    width: 212px;
+}
+#sign_up .birthday input[type=text]{
+ width: 75px;
 }

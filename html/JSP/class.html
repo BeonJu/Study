@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <!-- <script>
+            class Pet{
+                constructor(nameVal, ageVal, breedVal) {
+                    this.name = nameVal;
+                    this.age = ageVal;
+                    this.breed = breedVal;
+                    
+                }
+                catprint(pet){
+                    console.log(`${this.name} 입니다.`)
+                }
+                ageprint(pet){
+                    console.log(`${this.name}의 나이는 ${this.age}살 입니다.`)
+                }
+                breedprint(pet){
+                    console.log(`${this.name}의 종은 ${this.breed}종 입니다.`)
+                }
+            }
+
+
+            const cat = new Pet('나비', 6, '페르시안');
+            console.log(cat)
+            cat.catprint();
+            cat.ageprint();
+            cat.breedprint();
+        </script> -->
+
+
+        <button onclick="loc()">이동</button>
+        <button onclick="back()">뒤로</button>
+        <script>
+            // class Rectangle{
+            //     constructor(width,height) {
+            //         this.width = width;
+            //         this.height = height;
+            //     }
+            //     //사각형 둘레 구하기
+            //     getPerimeter(){
+            //         return 2 * (this.width + this.height)
+            //     }
+            //     // 사각형 넒이 구하기 
+            //     getArea(){ 
+            //         return this.width * this.height
+            //     }
+            // }
+            // const rect  = new Rectangle(50,10);
+            // console.log(rect.getPerimeter());
+            // console.log(rect.getArea());
+
+
+            // extends 상속
+            // 키워드 extends는 프로토타입을 기반으로 동작합니다. 
+            // extends는 Rabbit.prototype.[[Prototype]]을 
+            // Animal.prototype으로 설정합니다. 그렇기 때문에 
+            // Rabbit.prototype에서 메서드를 찾지 못하면 Animal.prototype에서 
+            // 메서드를 가져옵니다.
+
+
+            // 개발을 하다 보면 부모 메서드 전체를 교체하지 않고, 
+            // 부모 메서드를 토대로 일부 기능만 변경하고 싶을 때가 생깁니다. 
+            // 부모 메서드의 기능을 확장하고 싶을 때도 있죠. 이럴 때 커스텀 메서드를 
+            // 만들어 작업하게 되는데, 이미 커스텀 메서드를 만들었더라도 
+            // 이 과정 전·후에 부모 메서드를 호출하고 싶을 때가 있습니다.
+
+            // method overwring때문에  키워드 super는 이럴 때 사용합니다.
+
+            // super.method(...)는 부모 클래스에 정의된 메서드, method를 호출합니다.
+            // super(...)는 부모 생성자를 호출하는데, 자식 생성자 내부에서만 사용 할 수 있습니다.
+            // Ref. https://ko.javascript.info/class-inheritance
+
+            // class Square extends Rectangle{
+            //     constructor(length, length2){  
+            //         console.log(length, length2)
+            //         super(length, length2) // 부모의 생성자 함수를 호출한다.
+            //     }
+
+            // }
+            // const square = new Square(50,10);
+            // console.log(square.getPerimeter())
+            // console.log(square.getArea())
+
+
+        // class Rectangle{
+        //     #length // private 선언
+        //         constructor(length) {
+        //             this.#length = length;
+
+        //         }
+        //         static catName = "이디";
+        //         static eat(food){
+        //            console.log(`${this.catName}야 ${food} 먹자`)
+        //         }
+        //         getPerimeter(){
+        //             return 4 * this.#length
+        //         }
+                
+        //         getArea(){ 
+        //             return this.#length * this.#length
+        //         }
+        //         get isGetlength(){
+        //             return this.#length;
+        //         }
+        //         set isSetlength(value){
+        //             this.#length = value;
+        //         }
+        //     }
+        //     const rect  = new Rectangle(10);
+        //     console.log(rect.length);
+        //     console.log(rect.getPerimeter());
+        //     console.log(rect.getArea());
+        //     console.log(rect.isGetlength);
+        //     console.log(rect.isSetlength = 200);
+        //     console.log(rect.isGetlength);
+        //     console.log(Rectangle.catName);
+        //     console.log(Rectangle.length);
+        //     Rectangle.eat("밥");
+        //     console.log(Rectangle.catName = "묘목");
+        //     Rectangle.eat("물");
+
+        
+        
+        function loc(){
+            location.href = "./text.html"    // direct go
+        }
+        
+        function back(){
+            history.go(-1)    // back page
+        }
+
+        var sWidth =  screen.width;
+        var sHeight =  screen.height;
+        var sColor =  screen.colorDepth;
+        console.log(sWidth);
+        console.log(sHeight);
+        console.log(sColor);
+
+        var local = location.href;
+        console.log(local);
+
+        var NaviInfo = "User-agent header sent: " + navigator.userAgent;
+        console.log(NaviInfo);
+
+
+
+        </script>
+</body>
+</html>

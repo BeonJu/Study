@@ -1,0 +1,64 @@
+/* 사이트에서 공통적으로 사용 할수 있는 CSS 모음 ex)header, footer  */
+/* 
+a {
+    /* a 태그에 색변환 및 밑줄 표시 안함, 제일 우선적으로 적용 */
+    /* text-decoration: none !important; */
+/* }
+img {
+    /* 이미지 태두리 없음 */
+    /* border: 0;
+} */
+/* ul{ */
+    /* 리스트 앞머리 없음 */
+    /* list-style: none;
+} */ */ */
+
+header, footer, section {
+    /* 박스 사이징으로 보더 박스(컨텐츠, 패딩, 보더 같이 조절) */
+    box-sizing: border-box;
+}
+
+.wrap{
+    background-color: wheat;
+}
+
+/* 모바일 : 0 ~ 766xp */
+.header{
+
+}
+
+.header__nav {
+    /* 마진 사용하여 위아래 0 양옆 오토로 중앙, 플렉스 적용하고 넘치면 아래로 */
+    max-width: 1200px;
+    background-color: #9de25c;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+.header__nav > h1{
+    width: 100px;
+    height: 120px;
+    background-color: #9de25c;
+}
+.header__nav > nav{
+    /* 1100 px/1200px  */
+    width: calc(100% - 100px);
+    background-color: #ff6b57;
+    height: 120px;
+
+}
+.header__nav > nav > ul {
+    /* 플렉스 적용하고 넘치면 아래로 쌓임, 스페이스 어라운드로 컨텐츠 마다 동일 간격으로 띄어짐*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.header__nav > .delivery-order{
+    width: 168px;
+}
+
+.footer{
+    height: 680px;
+    background-color: #474747;
+}
+
