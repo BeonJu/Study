@@ -1,97 +1,139 @@
-section .con{
-    max-width: 1440px;
-    margin: 0 auto;
-    height: 100%;
 
+/*  @charset "uft-8" 언어팩 셋 */
+@charset "utf-8";
+
+/* ./common.css 참조 할수 있게 url 삽입 */
+@import url('./common.css');
+
+/* index.html */
+
+
+.wrap{
+	background: wheat;
+    padding-top: 60px;
 }
+section .con {
+	max-width: 1440px;
+	margin: 0 auto;
+	height: 100%;
+}
+
 .slider{
-    height: 480px;
+	height: 480px;
 }
+
 .slider__content {
-    background-color: thistle;
+	background: thistle;
 }
-.youtube {
-    height: 605px;
+
+.youtube{
+	height: 605px;
 }
-.youtube__content{
-    background-color: tomato;
+
+.youtube__content {
+	background:tomato;
 }
+
 .sns{
-    height: 160px;
+	height: 160px;
 }
+
 .sns__content {
-    background-color: turquoise;
+	background: turquoise;
 }
+
 .sns__content > ul {
-    display: flex;
-    flex-direction: row;
+	display: flex;
+	flex-direction: row;
 }
+
 .sns__content > ul > li {
-    /* 플렉스 basis 1 사이즈로 기본 박스 1 사이즈 지정, 텍스트 정렬 중앙 */
-    flex: 1;
-    text-align: center;
+	flex: 1;
+	text-align: center;
 }
+
 .guide{
-    height: 480px;
+	height: 480px;
 }
+
 .guide__content {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	/* flex-direction: row; */
+	flex-direction: column;
+	/* background: yellowgreen; */
 }
+
 .guide__content > div {
-    flex: 1;
-    text-align: center;
+	flex: 1;
+	text-align: center;
 }
-.guide__content > .content__app{
-    background-color: hotpink;
+
+.guide__content > .content__app {
+	background: hotpink;
 }
-.guide__content > .content__delivery{
-    background-color: indianred;
+
+.guide__content > .content__delivery {
+	background:indianred;
 }
+
 .store{
-    height: 597px;
+	height: 597px;
 }
+
 .store__content {
-    background-color: honeydew;
+	background: honeydew;
 }
-.store__content ul{
-    
-    overflow: hidden;
-    /* 1144px/1440px */
-    width: 79.44%;
-    margin: 0 auto;
+
+.store__content ul {
+	/* display: flex;
+	flex-direction: row;
+	justify-content: space-around; */
+	overflow: hidden;
+	/* 1144 ÷ 1440 */
+	width: 79.44%;
+	margin: 0 auto;
 }
+
 .store__content ul li {
-    /* float 사용 시 부모태그에 overflow:hidden 필요 */
-    float: left;
-    /* 597/1440 */
-    width: 33.33%;
-    text-align: center;
+	float: left;
+	width: 33.33%;
+	text-align: center;
 }
+
 .banner{
-    height: 200px;
+	height: 200px;
 }
+
 .banner__content {
-    background-color: gray;
+	background: gray;
+}
+
+.footer{
+	height:680px;
+	background:#474747;
 }
 
 
-/* 태블릿 : 767px 이상 */
+/* 테블릿: 767px 이상*/
 @media all and (min-width:767px){
-    .guide__content{
-        flex-direction: row;
-    }
-    .guide__content > .content__app{
+	.guide__content {
+		flex-direction: row;
+	}
 
-    }
-    .guide__content > .content__delivery{
+	.guide__content > .content__app {
+		
+	}
 
-    }
-    .store__content ul li {
+	.guide__content > .content__delivery {
+		
+	}
 
-        width: 16.66%;
-    }
+	.store__content ul li {
+		width: 16.66%;
+	}
 }
-@media all and (min-width:1024px){
-    
+
+/* pc: 1024px 이상 */
+@media all and (min-width:1024px){ 
+
 }
